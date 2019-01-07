@@ -1,0 +1,19 @@
+{
+  "//": "NT80101 React/Resources/WebService/package.json",
+  "name": "react-web-service",
+  "version": "1.0.0",
+  "description": "Resources/WebService",
+  "devDependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "sqlite": "3.0.0",
+    "express": "^4.16.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "private": true
+}

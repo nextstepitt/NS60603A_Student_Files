@@ -1,0 +1,251 @@
+/* app.css
+**
+** Main application shared CSS.
+*/
+
+/* Specific facet styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#app-logo {
+    height: 150px;
+}
+
+header.app-header {
+    background-image: url(../images/header-background.png);
+    background-repeat: no-repeat;
+    background-color: #4191C4;
+    height: 150px;
+}
+
+footer.app-footer {
+    height: 20pt;
+    text-align: center;
+    font-size: 10pt;
+    font-variant: small-caps;
+    color: Gray;
+}
+
+div.app-content {
+    margin: 10px;
+    min-height: calc(100vh - (150px + 10px + 21px + 20pt)); /* float footer to bottom with header + bottom_margin + top_margin (w/ h1) + footer */
+    text-align: left;
+}
+
+span.welcome-message {
+
+    font-size: 20pt;
+}
+
+span.error {
+    color: red;
+    font-weight: bold;
+    display: block
+}
+
+/* Styles for the lists */
+
+div.classlist {
+    list-style-type: none;
+}
+
+div.list-title {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+div.list-title::before, div.list-title-closed::before {
+    font-size: 12pt;
+    width: 1em;
+}
+
+div.list-title::before {
+    content: '\25bc'
+}
+
+div.list-title-closed::before {
+    content: '\25b6'
+}
+
+div.list {
+    width: 700px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid orange;
+    border-left: 10px solid orange;
+}
+
+div.list-item {
+    padding: 5px;
+}
+
+table.list {
+    border: none;
+    min-width: 700px;
+}
+
+th.list-name, td.list-name {
+    min-width: 450px;
+}
+
+th.list-price, td.list-price {
+    width: 200px;
+    text-align: right;
+}
+
+th.list-price {
+    font-variant: small-caps;
+}
+
+td.list-add-button {
+    min-width: 8em;
+    text-align: right;
+}
+
+/* Styles for the shopping cart */
+
+table.cart {
+    border: none;
+    min-width: 700px;
+    margin-bottom: 5px;
+}
+
+th.cart-name, td.cart-name {
+    min-width: 450px;
+}
+
+th.list-price, td.list-price, th.cart-price, td.cart-price {
+    width: 200px;
+    text-align: right;
+}
+
+th.list-price, th.cart-price, th.cart-instructions {
+    font-variant: small-caps;
+}
+
+th.cart-instructions {
+    width: inherit
+}
+
+td.cart-remove-button {
+    min-width: 8em;
+}
+
+/* Styles for the menu and navigation buttons */
+
+div.navigation {
+    width: 100%;
+    margin: 0;
+    background-color: navy;
+}
+
+button.navbutton, button.navbutton-selected {
+    font-size: 12pt;
+    height: 20pt;
+    vertical-align: middle;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-right: 1px solid darkgray;
+    background-color: navy;
+    color: white;
+    display: table-cell;
+    cursor: pointer;
+    border-collapse: collapse;
+}
+
+
+button.navbutton-selected {
+    background-color: blue; 
+}
+
+button.navbutton:focus, button.navbutton-selected:focus {
+    outline: 0;
+}
+
+/* Form fields */
+
+div.cc-form {
+    width: 100%;
+    position: relative;
+}
+
+div.cc-form-row > div.clear-all {
+    clear: both;
+}
+
+div.cc-form-row > div.cc-form-label {
+    float: left;
+    width: 300px;
+    text-align: right;
+    margin: 5px;
+}
+
+div.cc-form-row > div.cc-form-field {
+    float: left;
+    max-width: 40em;
+    width: calc(100% - 320px);
+    text-align: left;
+    margin: 5px;
+}
+
+input.cc-form-field-required {
+
+    border-right: 5px solid red;
+}
+
+input.cc-form-field-requirement-met {
+
+    border-right: 5px solid Green;
+}
+
+span.cc-form-errors {
+    color: red;
+    font-weight: bold;
+}
+
+button.checkout-button {
+    margin-top: 10px;
+    font-size: 12pt;
+}
+
+/* Styles for the special instructions popup */
+
+div.special-instructions-hidden {
+    display: none;
+}
+
+div.special-instructions-visible {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.50;
+}
+
+div.special-instructions {
+    position: fixed;
+    border: 2px solid darkgray;
+    background-color: white;
+    opacity: 1.0;
+    padding: 10px;
+    width: 600px;
+    left: calc(((100vw - 600px) / 2));
+    top: calc(((100vh - 100px) / 2));
+}
+
+div.special-instructions-buttons {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+}
+
+input[type=text].special-instructions {
+    width: 100%;
+    border: 1px solid black;
+}
